@@ -21,7 +21,7 @@ A RESTful service using Spring boot and MYSQL for stock inventory management.
 ![image](https://user-images.githubusercontent.com/53475276/129139164-55c1f314-aba9-4674-a553-b72ca4affbe3.png)
 
 
-## Databse Used 
+## Database Used 
 1. Application : MySQL Workbench
 2. Driver Class Name : com.mysql.cj.jdbc.Driver
 
