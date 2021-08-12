@@ -16,6 +16,11 @@ A RESTful service using Spring boot and MYSQL for stock inventory management.
 4. Update entry [PUT] : /stock/update
 5. Delete entry [DELETE] : /stock/delete/{stockId}
 
+## Spring Boot Settings
+
+![image](https://user-images.githubusercontent.com/53475276/129139164-55c1f314-aba9-4674-a553-b72ca4affbe3.png)
+
+
 ## Databse Used 
 1. Application : MySQL Workbench
 2. Driver Class Name : com.mysql.cj.jdbc.Driver
