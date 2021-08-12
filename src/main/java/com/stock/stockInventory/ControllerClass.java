@@ -4,9 +4,7 @@ package com.stock.stockInventory;
 import com.stock.stockInventory.Stock.Stock;
 import com.stock.stockInventory.StockService.StockService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -27,5 +25,12 @@ public class ControllerClass
     public Stock getStock(@PathVariable String stockId)
     {
         return this.stockService.getStock(Long.parseLong(stockId));
+    }
+
+    // POST method to add Stock
+    @PostMapping("/stock")
+    public Stock addStock(@RequestBody Stock stock)
+    {
+        return this.stockService.addStock(stock);
     }
 }
