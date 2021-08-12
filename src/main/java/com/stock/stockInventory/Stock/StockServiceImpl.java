@@ -32,4 +32,18 @@ public class StockServiceImpl implements StockService
     {
         return stockDAO.save(stock);
     }
+
+    @Override
+    public Stock updateStock(Stock stock)
+    {
+        stockDAO.save(stock);
+        return stock;
+    }
+
+    @Override
+    public void deleteStock(long stockId)
+    {
+        Stock stock = stockDAO.findById(stockId).get();
+        stockDAO.delete(stock);
+    }
 }
