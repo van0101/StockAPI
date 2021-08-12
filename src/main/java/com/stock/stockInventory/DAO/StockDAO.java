@@ -1,5 +1,9 @@
 package com.stock.stockInventory.DAO;
 
-public class StockDAO
+import com.stock.stockInventory.Stock.Stock;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface StockDAO extends JpaRepository<Stock,Long>
 {
+
 }
