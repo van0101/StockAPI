@@ -16,35 +16,35 @@ public class ControllerClass
     @Autowired
     StockService stockService;
 
-    // GET method to return List of Stock
-    @GetMapping("/stock")
+    // GET method to Display All Stocks
+    @GetMapping("/stock/display")
     public List<Stock> getStock()
     {
         return this.stockService.getStock();
     }
-    // GET method to return a specific stock
-    @GetMapping("/stock/{stockId}")
+    // GET method to Display a Specific Stock
+    @GetMapping("/stock/display/{stockId}")
     public Stock getStock(@PathVariable String stockId)
     {
         return this.stockService.getStock(Long.parseLong(stockId));
     }
 
-    // POST method to add Stock
-    @PostMapping("/stock")
+    // POST method to create Stock
+    @PostMapping("/stock/create")
     public Stock addStock(@RequestBody Stock stock)
     {
         return this.stockService.addStock(stock);
     }
 
-    // Update stock
-    @PutMapping("/stock")
+    // Update stock from Inventory
+    @PutMapping("/stock/update")
     public Stock updateStock(@RequestBody Stock stock)
     {
         return this.stockService.updateStock(stock);
     }
 
-    // Delete
-    @DeleteMapping("/stock/{stockId}")
+    // Delete Stock from Inventory
+    @DeleteMapping("/stock/delete/{stockId}")
     public ResponseEntity<HttpStatus> removeStock(@PathVariable String stockId)
     {
         try
