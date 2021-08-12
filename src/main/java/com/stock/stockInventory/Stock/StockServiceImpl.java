@@ -24,7 +24,7 @@ public class StockServiceImpl implements StockService
     @Override
     public Stock getStock(long stockId)
     {
-        return stockDAO.getById(stockId);
+        return stockDAO.findById(stockId).get();
     }
 
     @Override
